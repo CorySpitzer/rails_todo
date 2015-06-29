@@ -18,9 +18,23 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to  lists_path
+      redirect_to  lists_path #listed in rake route as lists under prefix
     else
       render :new
+    end
+  end
+
+  def edit
+    @list = List.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @list = List.find(params[:id])
+    if @list.update(list_params)
+      redirect_to lists_path
+    else
+      render :edit
     end
   end
 
