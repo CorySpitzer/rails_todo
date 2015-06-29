@@ -54,5 +54,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  # root to: 'lists/index'
   resources :lists
 end

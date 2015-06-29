@@ -8,11 +8,12 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'rerun'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 group :development do
   gem 'byebug'
   gem 'web-console'
-  gem 'spring'
+  # gem 'spring'
   gem 'quiet_assets'
 end
 
