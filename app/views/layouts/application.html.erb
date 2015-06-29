@@ -8,8 +8,11 @@
 </head>
 <body>
   <div class="container">
-    <%= yield %>
-    <%= link_to 'home', lists_path %>
+    <div class='jumbotron'>
+      <%= yield %>
+    </div>
+
+    <%= link_to 'Home', root_path %>
   </div>
 
 </body>
