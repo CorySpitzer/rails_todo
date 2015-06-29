@@ -55,5 +55,7 @@ Rails.application.routes.draw do
   #   end
 
   root to: 'lists#index'
-  resources :lists
+  resources :lists do
+    resources :tasks
+  end
 end
