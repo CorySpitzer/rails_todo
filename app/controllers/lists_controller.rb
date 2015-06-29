@@ -11,7 +11,8 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = List.new 
+    @list = List.new
+    render :new
   end
 
   def create
@@ -25,7 +26,7 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:name, :description)
+    params.require(:list).permit(:title)
   end
 
 end
